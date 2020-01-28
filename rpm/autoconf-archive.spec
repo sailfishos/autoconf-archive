@@ -20,14 +20,17 @@ supporters of the cause from all over the Internet.
 %build
 ln -sf ../gnulib gnulib
 echo %{version} | cut -d '+' -f 1 > .tarball-version
-# We do not want to depend on git
+cp .tarball-version .version
+# We do not want to depend on git, but we should find nicer thing to do here :/
 sed -i '/build-aux\/gitlog-to-changelog/d' ./bootstrap.sh
 sed -i '/gen-authors.sh/d' ./bootstrap.sh
-cp .tarball-version .version
+sed -i "s/ doc//" Makefile.am
+sed -i "s/ doc\/Makefile//" configure.ac
+touch AUTHORS
 rm -rf .git
 ./bootstrap.sh
 %configure
-make maintainer-all
+#make maintainer-all
 %make_build
 
 %install
@@ -41,4 +44,4 @@ rm -frv %{buildroot}%{_datadir}/doc/%{name}
 %doc AUTHORS NEWS README TODO
 %license COPYING*
 %{_datadir}/aclocal/*.m4
-%{_infodir}/autoconf-archive.info*
+#%{_infodir}/autoconf-archive.info*
