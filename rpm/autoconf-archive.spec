@@ -7,7 +7,6 @@ URL:            http://www.gnu.org/software/autoconf-archive/
 Source0:        %{name}-%{version}.tar.xz
 BuildArch:      noarch
 Requires:       autoconf
-BuildRequires:  texinfo
 
 %description
 The GNU Autoconf Archive is a collection of more than 450 macros for
