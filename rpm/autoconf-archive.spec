@@ -3,7 +3,7 @@ Version:        2019.01.06
 Release:        1
 Summary:        The Autoconf Macro Archive
 License:        GPLv3+ with exceptions
-URL:            http://www.gnu.org/software/autoconf-archive/
+URL:            https://github.com/sailfishos/autoconf-archive
 Source0:        %{name}-%{version}.tar.xz
 BuildArch:      noarch
 Requires:       autoconf
