@@ -3,4 +3,4 @@
 	url = https://github.com/sailfishos-mirror/gnulib.git
 [submodule "autoconf-archive"]
 	path = autoconf-archive
-	url = https://git.savannah.gnu.org/git/autoconf-archive.git
+	url = https://github.com/sailfishos-mirror/autoconf-archive.git
